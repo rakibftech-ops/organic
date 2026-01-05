@@ -152,20 +152,20 @@
       "+",
       "%2B"
     )}&type=${webinarType === "SWITCH_UP" ||
-        webinarType === "Agentic_AI" ||
-        webinarType === "MASTERCLASS_EVENT_AI" ||
-        webinarType === "MASTERCLASS_EVENT_2" ||
-        webinarType === "MASTERCLASS_EVENT_3" ||
-        webinarType === "MASTERCLASS_EVENT_4" ||
-        webinarType === "DATA_SCIENCE" ||
-        webinarType === "MASTERCLASS_EVENT_AI_1" ||
-        webinarType === "MASTERCLASS_NON_TECH_AI" ||
-        webinarType === "MASTERCLASS_NON_TECH_AI_2" ||
-        webinarType === "AI_LAUNCHPAD" ||
-        webinarType === "MASTERCLASS_EVENT" ||
-        webinarType === "NON_TECH_AI_WEBINAR"
-        ? webinarType
-        : "REGULAR"
+      webinarType === "Agentic_AI" ||
+      webinarType === "MASTERCLASS_EVENT_AI" ||
+      webinarType === "MASTERCLASS_EVENT_2" ||
+      webinarType === "MASTERCLASS_EVENT_3" ||
+      webinarType === "MASTERCLASS_EVENT_4" ||
+      webinarType === "DATA_SCIENCE" ||
+      webinarType === "MASTERCLASS_EVENT_AI_1" ||
+      webinarType === "MASTERCLASS_NON_TECH_AI" ||
+      webinarType === "MASTERCLASS_NON_TECH_AI_2" ||
+      webinarType === "AI_LAUNCHPAD" ||
+      webinarType === "MASTERCLASS_EVENT" ||
+      webinarType === "NON_TECH_AI_WEBINAR"
+      ? webinarType
+      : "REGULAR"
       }`;
 
     const option = {
@@ -614,6 +614,7 @@
       "Invitee End Time": webNearInfo.inviteEndTime,
       expertInsightABValue:
         typeof expertInsightABValue !== "undefined" ? expertInsightABValue : "",
+      ...(window.updateZapPayload || {}),
     };
 
     try {
